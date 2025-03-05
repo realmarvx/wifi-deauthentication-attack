@@ -84,12 +84,7 @@ aireplay-ng --deauth 10000 -a {bssid} -c {device_mac} wlan0
 Replace `{device_mac}` with the MAC address of the device you want to disconnect.  
 
 ---
-
-## Notes  
-- You need a **compatible WiFi adapter** that supports **monitor mode** and **packet injection**.  
-- This attack **does not break WiFi encryption**; it only **disconnects devices** temporarily.  
-- The attack stops when you stop running the command.
-## How to get netwek to restart 
+## How to get netwok to restart 
 - Run:
 
 ```bash
@@ -111,6 +106,12 @@ service NetworkManager start
 sudo service NetworkManager start
 ```
 - Your Wi-Fi adapter should restart at this point, so give it a second to show up.
+---
+
+## Notes  
+- You need a **compatible WiFi adapter** that supports **monitor mode** and **packet injection**.  
+- This attack **does not break WiFi encryption**; it only **disconnects devices** temporarily.  
+- The attack stops when you stop running the command.
 
 ---
 
