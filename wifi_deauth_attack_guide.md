@@ -88,7 +88,8 @@ Replace `{device_mac}` with the MAC address of the device you want to disconnect
 ## Notes  
 - You need a **compatible WiFi adapter** that supports **monitor mode** and **packet injection**.  
 - This attack **does not break WiFi encryption**; it only **disconnects devices** temporarily.  
-- The attack stops when you stop running the command.  
+- The attack stops when you stop running the command.
+- Restart devices that you killed run service NetworkManager start
 
 ---
 
