@@ -89,7 +89,28 @@ Replace `{device_mac}` with the MAC address of the device you want to disconnect
 - You need a **compatible WiFi adapter** that supports **monitor mode** and **packet injection**.  
 - This attack **does not break WiFi encryption**; it only **disconnects devices** temporarily.  
 - The attack stops when you stop running the command.
-- Restart devices that you killed run service NetworkManager start
+## How to get netwek to restart 
+- Run:
+
+```bash
+sudo airmon-ng stop wlan0mon
+```
+- Make sure your adapter is showing up. If it's not up, run:
+
+```bash
+ifconfig wlan0 up
+```
+- Restart the services that you killed.
+
+- Run:
+```bash
+service NetworkManager start
+```
+- Note: service network-manager start will give a message saying it's not installed. Hence, run:
+```bash
+sudo service NetworkManager start
+```
+- Your Wi-Fi adapter should restart at this point, so give it a second to show up.
 
 ---
 
